@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'apps.products',
     'apps.inventories',
     'apps.transactions',
-    'apps.sales'
+    'apps.sales',
+    'django_seed',
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -101,7 +102,7 @@ WSGI_APPLICATION = 'APIalmacen.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'tienda',
+        'NAME': 'almacen',
         'USER': 'admin',
         'PASSWORD': 'root',
         'HOST': '192.168.0.16',
@@ -180,4 +181,4 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 if config('DJANGO_PRODUCTION_ENV', default=False, cast=bool):
-    from .settings_production import *
+    from settings_production import *
