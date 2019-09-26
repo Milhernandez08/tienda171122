@@ -8,5 +8,5 @@ from apps.transactions import views
 
 urlpatterns = [
     re_path(r'^transactions/$', views.TransactionsList.as_view() ),
-    re_path(r'^transactions/(?P<id>\d+)$', views.TransactionsDetail.as_view() ),
+    # re_path(r'^transactions/(?P<id>\d+)$', views.TransactionsDetail.as_view() ),
 ]
